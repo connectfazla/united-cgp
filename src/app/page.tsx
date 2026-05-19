@@ -26,8 +26,8 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative bg-navy overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/images/11.webp')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/70" />
+        <div className="absolute inset-0 bg-[url('/images/hero-remote.webp')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-black/10" />
         <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-36">
           <div className="max-w-3xl">
             <span className="inline-block bg-teal/20 text-teal px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
