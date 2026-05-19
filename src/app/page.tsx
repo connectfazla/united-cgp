@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy overflow-hidden h-[80vh]">
+      <section className="relative bg-navy overflow-hidden h-[90vh]">
         <div className="absolute inset-0 bg-[url('/images/hero-remote-2.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent z-10" />
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center z-20">
