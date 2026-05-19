@@ -97,7 +97,7 @@ export function Footer() {
       </div>
       <div className="border-t border-navy-light">
         <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row justify-between items-center gap-2 text-sm text-gray-400">
-          <span>&copy; {new Date().getFullYear()} United Corporation. All rights reserved.</span>
+          <span>&copy; {new Date().getFullYear()} Fazla Rabbi. All rights reserved.</span>
           <span>ISO 9001:2000 Certified &bull; Government Authorized</span>
         </div>
       </div>
