@@ -31,18 +31,6 @@ export function Header() {
 
       {/* Main nav */}
       <header className="bg-white sticky top-0 z-50 shadow-sm">
-<<<<<<< HEAD
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center">
-            <Image
-              src="/logo.jpg"
-              alt="United Corporation"
-              width={180}
-              height={60}
-              className="h-14 w-auto object-contain"
-              priority
-            />
-=======
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="h-12 relative w-32">
@@ -53,7 +41,6 @@ export function Header() {
                 className="object-contain"
               />
             </div>
->>>>>>> ab39828 (chore: update main code)
           </Link>
 
           {/* Desktop nav */}
@@ -110,17 +97,17 @@ export function Header() {
 
         {/* Mobile nav */}
         {mobileOpen && (
-            <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-              <Link href="/" className="flex items-center gap-2">
-                <div className="h-12 relative w-32">
-                  <Image
-                    src="/images/logo.jpg"
-                    alt="United Corporation"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+          <div className="lg:hidden border-t border-gray-100 bg-white">
+            <nav className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+              <Link href="/" className="py-2.5 text-gray-700 font-medium" onClick={() => setMobileOpen(false)}>
+                Home
               </Link>
+              <Link href="/about" className="py-2.5 text-gray-700 font-medium" onClick={() => setMobileOpen(false)}>
+                About Us
+              </Link>
+              <button
+                className="py-2.5 text-gray-700 font-medium text-left flex items-center justify-between"
+                onClick={() => setServicesOpen(!servicesOpen)}
               >
                 Services
                 <svg className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
