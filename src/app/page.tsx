@@ -25,18 +25,18 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy overflow-hidden">
+      <section className="relative bg-navy overflow-hidden h-screen">
         <div className="absolute inset-0 bg-[url('/images/hero-remote-2.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
-        <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-36">
+        <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
           <div className="max-w-3xl">
             <span className="inline-block bg-teal/20 text-teal px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
               ISO 9001 Certified &bull; Government Authorized
             </span>
-            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+            <h1 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white leading-tight">
               Bangladesh&apos;s Leading Marine Engineering &amp; Offshore Solutions
             </h1>
-            <p className="mt-6 text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl">
+            <p className="mt-6 text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl">
               Comprehensive ship engineering, civil construction, power generation,
               hydrography, and navigation solutions — trusted by clients across Asia
               and the Middle East.
@@ -44,13 +44,13 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/services/ship-engineering"
-                className="bg-teal hover:bg-teal-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-lg"
+                className="bg-teal hover:bg-teal-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-base md:text-lg"
               >
                 Explore Our Services
               </Link>
               <Link
                 href="/contact"
-                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-lg border border-white/20"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-base md:text-lg border border-white/20"
               >
                 Get a Quote
               </Link>
