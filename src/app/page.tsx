@@ -1,103 +1,169 @@
-import Image from "next/image";
+import Link from "next/link";
+import { Anchor, Building2, Zap, Waves, Compass, Shield, Award, Globe, Clock, CheckCircle } from "lucide-react";
+import { services } from "@/data/services";
+import { projects } from "@/data/projects";
+import { SectionHeading, ServiceCard, ProjectCard, StatCard, CTABanner } from "@/components/ui";
+
+const iconMap: Record<string, React.ReactNode> = {
+  Anchor: <Anchor className="w-7 h-7" />,
+  Building2: <Building2 className="w-7 h-7" />,
+  Zap: <Zap className="w-7 h-7" />,
+  Waves: <Waves className="w-7 h-7" />,
+  Compass: <Compass className="w-7 h-7" />,
+};
+
+const whyChooseUs = [
+  { icon: <Shield className="w-6 h-6" />, title: "Government Authorized", description: "One of only three enterprises authorized by Bangladesh's State Department of Marine." },
+  { icon: <Award className="w-6 h-6" />, title: "ISO 9001 Certified", description: "International quality management standards across all operations." },
+  { icon: <Globe className="w-6 h-6" />, title: "Asia & Middle East", description: "Worldwide network with fast deployment of personnel and equipment." },
+  { icon: <Clock className="w-6 h-6" />, title: "24/7 Emergency Support", description: "Round-the-clock emergency repair and maintenance services." },
+  { icon: <CheckCircle className="w-6 h-6" />, title: "Classification Approved", description: "Meeting requirements of ABS, Bureau Veritas, DNV, GL, and Lloyd's Register." },
+  { icon: <Anchor className="w-6 h-6" />, title: "Full-Service Solutions", description: "From ship repair to civil construction — everything under one roof." },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero */}
+      <section className="relative bg-navy overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/images/hero-bg.jpg')] bg-cover bg-center opacity-20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/70" />
+        <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-36">
+          <div className="max-w-3xl">
+            <span className="inline-block bg-teal/20 text-teal px-4 py-1.5 rounded-full text-sm font-semibold mb-6">
+              ISO 9001 Certified &bull; Government Authorized
+            </span>
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight">
+              Bangladesh&apos;s Leading Marine Engineering &amp; Offshore Solutions
+            </h1>
+            <p className="mt-6 text-gray-300 text-lg md:text-xl leading-relaxed max-w-2xl">
+              Comprehensive ship engineering, civil construction, power generation,
+              hydrography, and navigation solutions — trusted by clients across Asia
+              and the Middle East.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Link
+                href="/services/ship-engineering"
+                className="bg-teal hover:bg-teal-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-lg"
+              >
+                Explore Our Services
+              </Link>
+              <Link
+                href="/contact"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-lg border border-white/20"
+              >
+                Get a Quote
+              </Link>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+      </section>
+
+      {/* Trust Bar */}
+      <section className="bg-gray-50 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14 text-gray-400">
+            {["American Bureau of Shipping", "Bureau Veritas", "DNV", "Germanischer Lloyd", "Lloyd's Register"].map(
+              (name) => (
+                <div key={name} className="text-center">
+                  <span className="text-xs font-semibold uppercase tracking-wider">{name}</span>
+                </div>
+              )
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <SectionHeading
+            label="What We Do"
+            title="Our Core Services"
+            description="Delivering comprehensive marine, offshore, and industrial engineering solutions with over a decade of experience."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.slug}
+                icon={iconMap[service.icon]}
+                name={service.name}
+                description={service.tagline}
+                href={`/services/${service.slug}`}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="bg-navy py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <StatCard value="10+" label="Years of Experience" />
+            <StatCard value="200+" label="Projects Completed" />
+            <StatCard value="150+" label="Vessels Serviced" />
+            <StatCard value="5" label="Service Divisions" />
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <SectionHeading
+            label="Why United Corporation"
+            title="Why Choose Us"
+            description="We combine technical expertise with a commitment to excellence that has earned us the trust of clients across the maritime industry."
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {whyChooseUs.map((item) => (
+              <div key={item.title} className="bg-white rounded-xl p-6 border border-gray-200">
+                <div className="w-12 h-12 bg-teal/10 rounded-lg flex items-center justify-center text-teal mb-4">
+                  {item.icon}
+                </div>
+                <h3 className="font-heading font-semibold text-gray-900 mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Projects */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4">
+          <SectionHeading
+            label="Our Work"
+            title="Featured Projects"
+            description="A selection of recent projects showcasing our capabilities across all service areas."
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projects.slice(0, 4).map((project) => (
+              <ProjectCard key={project.id} {...project} />
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-2 text-teal hover:text-teal-dark font-semibold transition-colors"
+            >
+              View All Projects
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <CTABanner
+        title="Ready to Discuss Your Next Marine Project?"
+        description="Contact us for a free consultation and quote. Our team of experts is ready to help."
+        buttonText="Contact Us Today"
+        buttonHref="/contact"
+      />
+    </>
   );
 }
