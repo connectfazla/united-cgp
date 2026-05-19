@@ -65,8 +65,13 @@ export default function AboutPage() {
                 </p>
               </div>
             </div>
-            <div className="bg-gray-100 rounded-2xl aspect-[4/3] flex items-center justify-center text-gray-400">
-              <span className="text-sm">Company Photo</span>
+            <div className="bg-gray-100 rounded-2xl aspect-[4/3] relative overflow-hidden">
+              <Image
+                src="/images/who-we-are.jpg"
+                alt="United Corporation marine engineering operations"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface SectionHeadingProps {
   label?: string;
@@ -91,9 +92,12 @@ export function ProjectCard({ title, category, description, image }: ProjectCard
     <div className="group bg-white rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition-all duration-300">
       <div className="aspect-[4/3] bg-gray-200 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-t from-navy/80 to-transparent z-10" />
-        <div className="absolute inset-0 bg-navy/20 flex items-center justify-center text-white/40 text-sm">
-          {image.replace("/images/", "").replace(".jpg", "")}
-        </div>
+        <Image
+          src={image}
+          alt={title}
+          fill
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+        />
         <span className="absolute top-3 left-3 z-20 bg-teal text-white text-xs font-semibold px-3 py-1 rounded-full">
           {category}
         </span>

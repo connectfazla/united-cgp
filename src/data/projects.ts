@@ -13,7 +13,7 @@ export const projects: Project[] = [
     category: "Ship Engineering",
     description:
       "Complete main engine overhaul and propeller balancing for a 12,000 DWT cargo vessel.",
-    image: "/images/project-1.jpg",
+    image: "/images/12.webp",
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     category: "Civil Construction",
     description:
       "Design and construction of a 120m jetty extension with marine piling works.",
-    image: "/images/project-2.jpg",
+    image: "/images/17.webp",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     category: "Power Generation",
     description:
       "Installation of dual 500kW Cummins generator sets for an offshore drilling platform.",
-    image: "/images/project-3.jpg",
+    image: "/images/19.webp",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     category: "Hydrography",
     description:
       "Multi-beam echo sounder survey and seabed mapping for channel dredging operations.",
-    image: "/images/project-4.jpg",
+    image: "/images/14.webp",
   },
   {
     id: 5,
@@ -45,7 +45,7 @@ export const projects: Project[] = [
     category: "Marine Navigation",
     description:
       "Full navigation aid installation including buoys, lights, and radar systems for a regional port.",
-    image: "/images/project-5.jpg",
+    image: "/images/11.webp",
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ export const projects: Project[] = [
     category: "Ship Engineering",
     description:
       "Emergency at-anchor repair of main engine fuel injection system for a Panamax bulk carrier.",
-    image: "/images/project-6.jpg",
+    image: "/images/110.webp",
   },
   {
     id: 7,
@@ -61,7 +61,7 @@ export const projects: Project[] = [
     category: "Civil Construction",
     description:
       "Marine piling and foundation construction for a new fishing jetty in Cox's Bazar.",
-    image: "/images/project-7.jpg",
+    image: "/images/13.webp",
   },
   {
     id: 8,
@@ -69,6 +69,6 @@ export const projects: Project[] = [
     category: "Marine Navigation",
     description:
       "Upgraded radar, AIS, and ECDIS systems across a fleet of 8 coastal tankers.",
-    image: "/images/project-8.jpg",
+    image: "/images/15.webp",
   },
 ];
