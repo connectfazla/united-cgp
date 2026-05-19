@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { services } from "@/data/services";
@@ -31,18 +32,15 @@ export function Header() {
       {/* Main nav */}
       <header className="bg-white sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
-              <span className="text-white font-heading font-bold text-lg">U</span>
-            </div>
-            <div>
-              <span className="font-heading font-bold text-navy text-xl leading-tight block">
-                United Corporation
-              </span>
-              <span className="text-xs text-gray-500 leading-tight">
-                Marine & Offshore Solutions
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo.jpg"
+              alt="United Corporation"
+              width={180}
+              height={60}
+              className="h-14 w-auto object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}
