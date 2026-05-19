@@ -16,9 +16,9 @@ export function Header() {
       <div className="bg-navy text-white text-sm hidden md:block">
         <div className="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:+8801234567890" className="flex items-center gap-1.5 hover:text-teal transition-colors">
+            <a href="tel:+8801781400925" className="flex items-center gap-1.5 hover:text-teal transition-colors">
               <Phone className="w-3.5 h-3.5" />
-              +880 1234-567890
+              +880 1781-400925
             </a>
             <a href="mailto:info@unitedcgp.com" className="flex items-center gap-1.5 hover:text-teal transition-colors">
               <Mail className="w-3.5 h-3.5" />
@@ -139,8 +139,8 @@ export function Header() {
                 Get a Quote
               </Link>
               <div className="mt-3 pt-3 border-t border-gray-100 text-sm text-gray-500 space-y-2">
-                <a href="tel:+8801234567890" className="flex items-center gap-2">
-                  <Phone className="w-4 h-4" /> +880 1234-567890
+                <a href="tel:+8801781400925" className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" /> +880 1781-400925
                 </a>
                 <a href="mailto:info@unitedcgp.com" className="flex items-center gap-2">
                   <Mail className="w-4 h-4" /> info@unitedcgp.com

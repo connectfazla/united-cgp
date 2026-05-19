@@ -40,9 +40,9 @@ export default function ContactPage() {
               {
                 icon: <Phone className="w-6 h-6" />,
                 title: "Phone",
-                line1: "+880 1234-567890",
+                line1: "+880 1781-400925",
                 line2: "+880 9876-543210",
-                href: "tel:+8801234567890",
+                href: "tel:+8801781400925",
               },
               {
                 icon: <Mail className="w-6 h-6" />,
