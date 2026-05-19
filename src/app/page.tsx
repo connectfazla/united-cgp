@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy overflow-hidden h-screen">
+      <section className="relative bg-navy overflow-hidden h-[80vh]">
         <div className="absolute inset-0 bg-[url('/images/hero-remote-2.webp')] bg-cover bg-center" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 h-full flex items-center">
@@ -44,13 +44,13 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/services/ship-engineering"
-                className="bg-teal hover:bg-teal-dark text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-lg"
+                className="bg-teal hover:bg-teal-dark text-white font-semibold px-6 py-2.5 rounded-lg transition-colors text-base"
               >
                 Explore Our Services
               </Link>
               <Link
                 href="/contact"
-                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-3.5 rounded-lg transition-colors text-lg border border-white/20"
+                className="bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-2.5 rounded-lg transition-colors text-base border border-white/20"
               >
                 Get a Quote
               </Link>
